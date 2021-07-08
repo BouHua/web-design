@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>关于</title>
+		<link type="text/css" rel="stylesheet" href="css/time.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link href="css/main.css" type="text/css" rel="stylesheet" />
+		<style>
+		*{
+			box-sizing: border-box;
+			padding 0;
+			margin: 0;
+		}
+		.container{
+			display: flex;
+			overflow-x: scroll;
+		}
+		.page{
+			width: 100vw;
+			height: 100vh;
+			flex-shrink: 0;
+		}
+		.page:nth-child(1){
+			background: hsl(170deg,50%,50%);
+		}
+		.page:nth-child(2){
+			background: hsl(210deg,50%,50%);
+		}
+		.page:nth-child(3){
+			background: hsl(210deg,50%,50%);
+		}
+	</style>
+	</head>
+	
+	<body>
+		<table  class="menu">
+				<tr  class="sel" align="center" valign="middle">
+				<td class="scc"><a href="main.html" class="menu-item1">首页</a></td>
+				<td class="scc"><a href="culture.html" class="menu-item1">文化</a></td>
+				<td class="scc"><a href="movies.html" class="menu-item1">相关作品</a></td>
+				<td class="scc"><a href="desscion.html" class="menu-item1">讨论</a></td>
+				<td class="scc"><a href="relate.html" class="menu-item1">关于</a></td>
+				<td class="scc"><a href="index.html" class="menu-item2">登录</a>
+					<a href="register.html" class="menu-item2">注册</a> </td>
+				</tr>
+		</table>
+		<main>
+			<div class="container">
+		      <div class="page">
+				  <div class="box">
+				      <img src="img/QQ截图20210708001229.png" alt="" class="box-img">
+				      <h1 class="name">Beings</h1>
+				      <h2>jiao bai hua</h2>
+				      <h3>“欢迎来到夜之城！”</h3>
+				      <h3>“赛博朋克文化，充斥着神秘的暴力美学”</h3>
+				      <div class="one">QQ：117286543</div>
+				  </div>
+			  </div>
+		      <div class="page">
+				  <div class="box">
+				      <img src="img/QQ截图20210708142107.png" alt="" class="box-img">
+				      <h1 class="name">Naive、L</h1>
+				      <h2>Li Wu</h2>
+				      <h3>睡沙发的人</h3>
+				      <h3>“？？？？”</h3>
+				      <div class="one">QQ：779564043</div>
+				  </div>
+			  </div>
+		      <div class="page">
+				  <div class="box">
+				      <img src="img/QQ截图20210708142130.png" alt="" class="box-img">
+				      <h1 class="name"></h1>
+				      <h2>@Yes,ok!</h2>
+				      <h3>Gui hao</h3>
+				      <h3>“？？？”</h3>
+					  <h3>"????</h3>
+				      <div class="one">QQ：3499254774</div>
+				  </div>
+			  </div>
+		    </div>
+		</main>
+		<div class="footer">
+		<span>©C_Y_S工作室</span>
+		<span>支持Edge，Google</span>
+		</div>
+		<script>
+			var container = document.querySelector(".ctontainer");
+			container.addEventListener("wheel",(event){
+				event.prevebtDefault();
+				container.scrollLeft += event.deltaY;
+			});
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CyberPunk</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link href="css/main.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/video.css" />
+	</head>
+	<body>
+		<div id="video">
+    	<div id="mp4par">
+        <div id="controls">
+            <input type="range" id="btntime" value="0" max="100"><br>
+            <button id="btnstart" style="top: -4px">▶</button>
+            <button id="btngo">🔄<i class="iconfont"></i></button>
+            <button id="btnback">⏪<i class="iconfont"></i></button>
+            <button id="btnmute">🔇<i class="iconfont"></i></button>
+            <input type="range" id="btnsound" value="0" max="100">
+            <button id="btnbig">💢<i class="iconfont"></i></button>
+            <button><i class="iconfont">&#xe638;</i></button>
+            <img src="img/叉叉.png" width="50px" height="50px" id="cross" class="chacha"/>
+        </div>
+    </div>
+</div>
+		<div id="screen">
+		<button class="bbb">立即加入</button>
+		<video src="video/背景.mp4"autoplay muted loop class="vd">	</video>
+		<video src="#" class="svgg"></video>
+		<table  class="menu">
+				<tr  class="sel" align="center" valign="middle">
+				<td class="scc"><a href="main.html" class="menu-item1">首页</a></td>
+				<td class="scc"><a href="culture.html" class="menu-item1">文化</a></td>
+				<td class="scc"><a href="movies.html" class="menu-item1">相关作品</a></td>
+				<td class="scc"><a href="desscion.html" class="menu-item1">讨论</a></td>
+				<td class="scc"><a href="relate.html" class="menu-item1">关于</a></td>
+				<td class="scc"><a href="index.html" class="menu-item2" id="welcome">登录</a>
+					<a href="register.html" class="menu-item2" id="user">注册</a> </td>
+				</tr>
+		</table>
+		<nav class="total">
+			<ul id="banner">
+				<li><img src="img/轮播1.png" class="cyberpunk1" id="svg" onmouseover="mo()" onmouseout="mm()"/></li>
+				<li><img src="img/轮播2.jpg" class="cyberpunk1" onmouseover="mo()" onmouseout="mm()"/></li>
+				<li><img src="img/轮播3.png" class="cyberpunk1" onmouseover="mo()" onmouseout="mm()"/></li>
+				<li><img src="img/轮播4.png" class="cyberpunk1" onmouseover="mo()" onmouseout="mm()"/></li>
+				<li><img src="img/轮播5.png" class="cyberpunk1" onmouseover="mo()" onmouseout="mm()"/></li>
+				<li><img src="img/轮播1.png" class="cyberpunk1" onmouseover="mo()" onmouseout="mm()"/></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="footer">
+	<span>©C_Y_S工作室</span>
+	<span>支持Edge，Google</span>
+	</div>
+	<script>
+			var curindex=0;
+			var maxlen=document.getElementById("banner").getElementsByTagName("li").length-1;
+			var cyberpunk1=document.getElementsByClassName("cyberpunk1");
+			var svg=document.getElementById("svg");
+			var chacha=document.getElementById("cross");
+			var timer=null;
+			var width=400;
+			timer=setInterval('change_auto()',3000);
+			svg.onclick=function()
+			{
+				var screen=document.getElementById("screen");
+				var crv=document.getElementById("mp4par");
+				var div=document.getElementById("video");
+				var showv=document.createElement('video');
+				showv.setAttribute("id","mp4");
+				showv.setAttribute("src","video/video1.mp4");
+				crv.appendChild(showv);
+				var video = document.getElementById("mp4");
+			    var btnstart = document.getElementById("btnstart");
+			    var btntime = document.getElementById("btntime");
+			    var btngo = document.getElementById("btngo");
+			    var btnback = document.getElementById("btnback");
+			    var btnmute=document.getElementById("btnmute");
+			    var btnsound=document.getElementById("btnsound");
+			    var btnbig=document.getElementById("btnbig");
+			    var time;
+			    screen.style.filter="blur(15px)";
+			    div.style.display="block";
+			    //视频控制
+			    video.onplaying = function () {
+			        var allTime = this.duration;
+			        btntime.setAttribute("max", allTime);
+			    };
+			    video.ontimeupdate = function () {
+			        btntime.value = this.currentTime;
+			    }
+			    btntime.addEventListener("mousedown", function () {
+			        video.pause();
+			        this.onmousemove = function () {
+			            video.currentTime = this.value;
+			        };
+			        this.onmouseup = function () {
+			            video.play();
+			            this.onmousemove = null;
+			            this.onmouseup = null;
+			        }
+			    });
+			    btngo.addEventListener("click", function () {
+			        btnstart.innerHTML = "播放";
+			        video.pause();
+			        time = setInterval(function () {
+			            video.currentTime += 5;
+			        }, 1000);
+			    });
+			    btnback.addEventListener("click", function () {
+			        btnstart.innerHTML = "播放";
+			        video.pause();
+			        time = setInterval(function () {
+			            video.currentTime -= 2;
+			            if (video.currentTime <= 0) {
+			                video.play();
+			                clearInterval(time);
+			            }
+			        }, 1000);
+			    });
+			
+			    btnmute.addEventListener("click",function(){
+			        video.muted=!video.muted;
+			    });
+			
+			    btnsound.addEventListener("mousedown",function(){
+			        this.onmousemove=function(){
+			            video.volume=this.value/100;
+			        }
+			        this.onmouseup=function(){
+			            this.onmousemove=null;
+			            this.onmouseup=null;
+			        }
+			    });
+			    btnbig.addEventListener("click",function(){
+			        if (video.webkitRequestFullScreen) {
+			            video.webkitRequestFullScreen();
+			        }
+			        else if (video.mozRequestFullScreen) {
+			            video.mozRequestFullScreen();
+			        }
+			        else if (video.msRequestFullScreen) {
+			            video.msRequestFullScreen();
+			        }
+			        else if (video.RequestFullScreen) {
+			            video.RequestFullScreen();
+			        }
+			    });
+			
+			    btnstart.addEventListener("click", function () {
+			        if (this.innerHTML == "播放") {
+			            video.play();
+			            this.innerHTML = "暂停";
+			            clearInterval(time);
+			        }
+			        else {
+			            video.pause();
+			            this.innerHTML = "播放";
+			        }
+			    });
+			}
+			chacha.onclick=function()
+			{
+				var div=document.getElementById("video");
+				var screen=document.getElementById("screen");
+				var mp4=document.getElementById("mp4");
+				div.style.display="none";
+				screen.style.filter="blur(0px)";
+				mp4.remove();
+			}
+			function mo()
+			{
+				clearInterval(timer);
+			}
+			function mm()
+			{
+				timer=setInterval("change_auto()",3000);
+			}
+			function change_auto()
+			{
+				if(curindex<maxlen)
+				{
+					curindex++;
+					goNext();
+				}
+				else
+				{
+					curindex=0;
+					gofirst();
+				}
+			}
+			function goNext()
+			{
+				var totalbanner=document.getElementById("banner");
+				totalbanner.style.marginLeft="-"+width*curindex+"px";
+				totalbanner.style.transition=0.3+"s";
+			}
+			function gofirst()
+			{
+				var totalbanner=document.getElementById("banner");
+				totalbanner.style.marginLeft="0px";
+				totalbanner.style.transition="0s";
+			}
+			window.onload=function()
+			{
+				let id = window.location.search.slice(1);
+				console.log(id);
+				let key = localStorage.key(id); 
+				let data = localStorage.getItem(key); 
+				console.log(data); 
+				let info = JSON.parse(data) 
+				console.log(info);
+				if(info!=null)
+				{
+				var welcome=document.getElementById("welcome");
+				var user=document.getElementById("user");
+				welcome.innerHTML="欢迎你!"
+				user.innerHTML=info.name;
+				}
+			}
+</script>
+	</script>
+	</body>
+</html>

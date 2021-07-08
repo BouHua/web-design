@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>讨论</title>
+		<link type="text/css" rel="stylesheet" href="css/desscion.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<link href="css/main.css" type="text/css" rel="stylesheet" />
+		<style>
+			body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;border:none; outline: none;}
+			h1,h2,h3,h4,h5,h6{font-size:100%;}
+			address,cite,dfn,em,var{font-style:normal;}
+			code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+			ul,ol{list-style:none;}
+			a{text-decoration:none;}
+			a:hover, a:visited, a:link, a:active{text-decoration:none;}
+			sup{vertical-align:text-top;}
+			sub{vertical-align:text-bottom;}
+			legend{color:#000000;}
+			fieldset,img{border:0;}
+			input,select,textarea{font-size:100%;}
+			table{border-collapse:collapse;border-spacing:0;}
+			.clear{clear: both;float: none;height: 0;overflow: hidden;}
+			body{color:#333; font: 12px/1.3 'Arial','Microsoft YaHei';}
+			#pn
+			{width: 550px; height: auto; background: #000000; margin: 0 auto; padding: 10px;}
+			.banner
+			{
+				position: absolute;
+				height: 50%;
+				width:45%;
+				top:40%;
+				right: 0%;
+				overflow: hidden;
+			}
+			.list0{padding: 10px 0; position: relative; border-top: 0px solid #eee;
+			top: 0px;background-color:#000000;}
+			.head{width: 60px; float: left;}
+			.head img{width: 60px; height: 60px; }
+			.close{width: 20px; height: 20px; position: absolute; top: 0; right: 0; color: #ffff00; font-size: 14px; text-align: center; line-height: 20px;}
+			.close:hover{color: #eb7350;}
+			.content{width: 450px; line-height: 20px; font-size: 14px; margin-left: 70px; }
+			.name{color: #eb7350; }
+			.pic{margin: 5px 0;}
+			.good:after{clear:both;content:'';display:block;width:0;height:0;visibility:hidden;}
+			.good{*zoom:1;}
+			.date{float:left; color: #ffff00;}
+			.good a{float: right; color: #ffff00;}
+			.people{background: #ffff00; height: 28px; line-height: 28px; padding-left: 10px; margin: 5px 0;}
+			.comment:after{clear:both;content:'';display:block;width:0;height:0;visibility:hidden;}
+			.comment{*zoom:1; padding: 10px 0; border-top: 1px solid #eee;}
+			.comment-left{width: 30px; float: left; display: inline; margin-right: 10px;}
+			.comment-left img{width: 30px; height: 30px;}
+			.comment-right{float: left; width: 410px;}
+			.comment-text{line-height: 18px;}
+			.comment-text span{color:#eb7350;}
+			.comment-date{font-size: 12px; line-height: 14px; color: #ccc; position: relative;}
+			.comment-zan{position: absolute; right: 40px; bottom: 0; color: #808080;}
+			.comment-dele{position: absolute; right: 0; bottom: 0; color: #808080;}
+			.hf:after{clear:both;content:'';display:block;width:0;height:0;visibility:hidden;}
+			.hf{*zoom:1;}
+			.hf-text{ border: 1px solid #eee; display: block; height: 15px; width: 438px; padding: 5px; resize: none; color: #ccc; font-size:12px;}
+			.hf-on .hf-text{height: 60px; color: #333; border:1px solid #000000;}
+			.hf-btn{text-align: center; width: 65px; height: 26px; background: #ff5500; color: #ccc; font-size: 12px; display: none;}
+			.hf-btn-on{background: #000000; color: #fff; }
+			.hf-nub{float: right; padding: 3px 5px; color: #666; display: none;}
+			.hf-on .hf-btn{display: inline;}
+			.hf-on .hf-nub{display: inline;}
+		</style>
+	</head>
+	
+	<body>
+		<div id="screen">
+		<video src="video/背景.mp4"autoplay muted loop class="vd">	</video>
+		
+		<table  class="menu">
+				<tr  class="sel" align="center" valign="middle">
+				<td class="scc"><a href="main.html" class="menu-item1">首页</a></td>
+				<td class="scc"><a href="culture.html" class="menu-item1">文化</a></td>
+				<td class="scc"><a href="movies.html" class="menu-item1">相关作品</a></td>
+				<td class="scc"><a href="desscion.html" class="menu-item1">讨论</a></td>
+				<td class="scc"><a href="relate.html" class="menu-item1">关于</a></td>
+				<td class="scc"><a href="index.html" class="menu-item2">登录</a>
+					<a href="register.html" class="menu-item2">注册</a> </td>
+				</tr>
+		</table>
+		<div class="banner">
+		<ul id="pn">
+		<li class="list0">
+		<a class="close" href="javascript:;">X</a>
+		<div class="content">
+		<p class="text"><span class="name">Beings：网站初步完成！🤩</span></p> 
+		<div class="good"><span class="date">07-04 21:00</span><a class="dzan" href="javascript:;">赞</a></div>
+		<div class="people" total="2980">2980人觉得很赞</div>
+		<div class="comment-list">
+		<div class="comment" user="self">
+		 <div class="comment-right">
+		 <div class="comment-text"><span class="user">小李子：好耶！❤❤</span></div>
+		 <div class="comment-date">07-05 22:00
+		 <a class="comment-zan" href="javascript:;" total="23" my="1">23 取消赞</a>
+		 <a class="comment-dele" href="javascript:;">回复</a>
+		 </div>
+		 </div>
+		</div>
+		<div class="comment" user="self">
+		 <div class="comment-right">
+		 <div class="comment-text"><span class="user">我：</span></div>
+		 <div class="comment-date">07-05 24:00
+		 <a class="comment-zan" href="javascript:;" total="0" my="0">赞</a>
+		 <a class="comment-dele" href="javascript:;">删除</a>
+		 </div>
+		 </div>
+		</div>
+		</div>
+		<div class="hf">
+		<textarea type="text" class="hf-text" autocomplete="off" maxlength="100">评论…</textarea>
+		<a class="hf-btn" href="javascript:;">回复</a>
+		<span class="hf-nub">0/100</span>
+		</div>
+		</div>
+		</li>
+		<li class="list0">
+		<a class="close" href="javascript:;">X</a>
+		<div class="content">
+		<p class="text"><span class="name">Beings：<img src="img/QQ截图20210708001229.png" height="100px" width="100px"></span></p> 
+		<div class="good"><span class="date">07-06 21:00</span><a class="dzan" href="javascript:;">赞</a></div>
+		<div class="people" total="0" style="display: none;"></div>
+		<div class="comment-list">
+		<div class="comment" user="self">
+		 <div class="comment-right">
+		 <div class="comment-text"><span class="user">我：</span></div>
+		 <div class="comment-date"><span class="date" id="clock"></span>
+		 <a class="comment-zan" href="javascript:;" total="286" my="1">286 取消赞</a>
+		 <a class="comment-dele" href="javascript:;">删除</a>
+		 </div>
+		 </div>
+		</div>
+		</div>
+		<div class="hf">
+		<textarea type="text" class="hf-text" autocomplete="off" maxlength="100">评论…</textarea>
+		<a class="hf-btn" href="javascript:;">回复</a>
+		<span class="hf-nub">0/100</span>
+		</div>
+		</div>
+		</li>
+		<li class="list0">
+		<a class="close" href="javascript:;">X</a>
+		<div class="content">
+		<p class="text"><span class="name">Beings：</span></p> 
+		<div class="good"><span class="date">07-06 21:00</span><a class="dzan" href="javascript:;">赞</a></div>
+		<div class="people" total="0" style="display: none;"></div>
+		<div class="comment-list">
+		<div class="comment" user="self">
+		 <div class="comment-right">
+		 <div class="comment-text"><span class="user">我：</span></div>
+		 <div class="comment-date"><span class="date" id="clock"></span>
+		 <a class="comment-zan" href="javascript:;" total="286" my="1">286 取消赞</a>
+		 <a class="comment-dele" href="javascript:;">删除</a>
+		 </div>
+		 </div>
+		</div>
+		</div>
+		<div class="hf">
+		<textarea type="text" class="hf-text" autocomplete="off" maxlength="100">评论…</textarea>
+		<a class="hf-btn" href="javascript:;">回复</a>
+		<span class="hf-nub">0/100</span>
+		</div>
+		</div>
+		</li>
+		<li class="list0">
+		<a class="close" href="javascript:;">X</a>
+		<div class="content">
+		<p class="text"><span class="name">Beings：</span></p> 
+		<div class="good"><span class="date">07-06 21:00</span><a class="dzan" href="javascript:;">赞</a></div>
+		<div class="people" total="0" style="display: none;"></div>
+		<div class="comment-list">
+		<div class="comment" user="self">
+		 <div class="comment-right">
+		 <div class="comment-text"><span class="user">我：</span></div>
+		 <div class="comment-date"><span class="date" id="clock"></span>
+		 <a class="comment-zan" href="javascript:;" total="286" my="1">286 取消赞</a>
+		 <a class="comment-dele" href="javascript:;">删除</a>
+		 </div>
+		 </div>
+		</div>
+		</div>
+		<div class="hf">
+		<textarea type="text" class="hf-text" autocomplete="off" maxlength="100">评论…</textarea>
+		<a class="hf-btn" href="javascript:;">回复</a>
+		<span class="hf-nub">0/100</span>
+		</div>
+		</div>
+		</li>
+		</ul>
+		</div>
+		</div>
+		<div class="footer">
+		<span>©C_Y_S工作室</span>
+		<span>支持Edge，Google</span>
+		</div>
+		<script type="text/javascript"> 
+	function addloadEvent(func){
+	var oldonload=window.onload;
+	if(typeof window.onload !="function"){
+	 window.onload=func;
+	}
+	else{
+	 window.onload=function(){
+	 if(oldonload){
+	  oldonload(); 
+	 }
+	 func();
+	 }
+	}
+	}
+	addloadEvent(b);
+	function b(){
+	var pn=document.getElementById("pn");
+	var lists=pn.children;
+	function remove(node){
+	node.parentNode.removeChild(node);
+	}
+	function praisebox(box,el){
+	var praise=box.getElementsByClassName("people")[0];
+	var total=parseInt(praise.getAttribute("total"));
+	var txt=el.innerHTML;
+	var newtotal;
+	if(txt=="赞"){
+	newtotal=total+1;
+	praise.innerHTML=newtotal==1 ? "我觉得很赞" : "我和" + total +"个人觉得很赞";
+	el.innerHTML="取消赞";
+	}
+	else{
+	newtotal=total-1;
+	praise.innerHTML=newtotal==0 ? "" : newtotal +"个人觉得很赞";
+	el.innerHTML="赞";
+	}
+	praise.setAttribute("total",newtotal);
+	praise.style.display=(newtotal==0) ? "none" : "block";
+	}
+	function reply(box){
+	var textarea=box.getElementsByTagName("textarea")[0];
+	var comment=box.getElementsByClassName("comment-list")[0];
+	var div=document.createElement("div");
+	div.className="comment";
+	div.setAttribute("user","self");
+	var html='<div class="comment-left">'+'</div>'+
+	 '<div class="comment-right">'+
+	 '<div class="comment-text"><span>我：</span>'+textarea.value+'</div>'+
+	 '<div class="comment-date">'+
+	 getTime()+
+	 '<a class="comment-zan" href="javascript:;" total="0" my="0">赞</a>'+
+	 '<a class="comment-dele" href="javascript:;">删除</a>'+
+	 '</div>'+
+	 '</div>';
+	div.innerHTML=html;
+	comment.appendChild(div);
+	textarea.value="评论…";
+	textarea.parentNode.className="hf";
+	}
+	function getTime(){
+	var t=new Date();
+	var y=t.getFullYear();
+	var m=t.getMonth()+1;
+	var d=t.getDate();
+	var h=t.getHours();
+	var mi=t.getMinutes();
+	m=m<10?"0"+m:m;
+	d=d<10?"0"+d:d;
+	h=h<10?"0"+h:h;
+	mi=mi<10?"0"+mi:mi;
+	return y+"-"+m+"-"+d+""+h+":"+mi;
+	}
+	function praiseReply(el){
+	var total=parseInt(el.getAttribute("total"));
+	var my=parseInt(el.getAttribute("my"));
+	var newtotal;
+	if(my==0){
+	newtotal=total+1;
+	el.setAttribute("total",newtotal);
+	el.setAttribute("my",1);
+	el.innerHTML=newtotal+" 取消赞";
+	}else{
+	newtotal=total-1;
+	el.setAttribute("total",newtotal);
+	el.setAttribute("my",0);
+	el.innerHTML=(newtotal==0)?" 赞":newtotal+" 赞";
+	}
+	}
+	function operateReply(el){
+	var comment=el.parentNode.parentNode.parentNode;
+	var box=comment.parentNode.parentNode.parentNode;
+	var textarea=box.getElementsByTagName("textarea")[0];
+	var user=comment.getElementsByClassName("user")[0];
+	var txt=el.innerHTML;
+	if(txt=="回复"){
+	textarea.onfocus();
+	textarea.value="回复 "+user.innerHTML;
+	textarea.onkeyup();
+	}else{
+	remove(comment);
+	}
+	}
+	for(var i=0;i<lists.length;i++){
+	lists[i].onclick=function(e){
+	var e=e||window.event;
+	var el=e.srcElement;
+	if(!el){
+	el=e.target;
+	}
+	switch(el.className){
+	case "close":
+	remove(el.parentNode);
+	break;
+	case "dzan":
+	praisebox(el.parentNode.parentNode.parentNode,el);
+	break;
+	case "hf-btn hf-btn-on":
+	reply(el.parentNode.parentNode.parentNode);
+	break;
+	case "comment-zan":
+	praiseReply(el);
+	break;
+	case "comment-dele":
+	operateReply(el);
+	break;
+	}
+	}
+	var textarea=lists[i].getElementsByClassName("hf-text")[0];
+	textarea.onfocus=function(){
+	this.parentNode.className='hf hf-on';
+	this.value = this.value == '评论…' ? '' : this.value;
+	}
+	textarea.onblur=function(){
+	if(this.value==''){
+	this.parentNode.className='hf';
+	this.value ='评论…'; 
+	} 
+	}
+	textarea.onkeyup=function(){
+	var len=this.value.length;
+	var textParentNode=this.parentNode;
+	var textBtn=textParentNode.children[1];
+	var textNub=textParentNode.children[2];
+	if(len==0 ){
+	textBtn.className="hf-btn";
+	}else{
+	textBtn.className="hf-btn hf-btn-on"; 
+	}
+	textNub.innerHTML=len+"/100";
+	}
+	}
+	}
+		</script>
+	</body>
+	</html>
+
